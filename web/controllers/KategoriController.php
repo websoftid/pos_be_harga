@@ -1,7 +1,5 @@
 <?php
-
 namespace app\controllers;
-
 use Yii;
 use app\models\Kategori;
 use yii\data\ActiveDataProvider;
@@ -29,11 +27,9 @@ class KategoriController extends Controller
         $dataProvider = new ActiveDataProvider([
             'query' => Kategori::find(),
         ]);
-
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['index']);
         }
-
         return $this->render('create', [
             'model' => $model,
             'dataProvider' => $dataProvider
@@ -46,11 +42,9 @@ class KategoriController extends Controller
         $dataProvider = new ActiveDataProvider([
             'query' => Kategori::find(),
         ]);
-
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
           return $this->redirect(['index']);
         }
-
         return $this->render('update', [
             'model' => $model,
             'dataProvider' => $dataProvider
@@ -60,23 +54,14 @@ class KategoriController extends Controller
     public function actionDelete($id)
     {
         $this->findModel($id)->delete();
-
         return $this->redirect(['index']);
     }
 
-    /**
-     * Finds the Kategori model based on its primary key value.
-     * If the model is not found, a 404 HTTP exception will be thrown.
-     * @param integer $id
-     * @return Kategori the loaded model
-     * @throws NotFoundHttpException if the model cannot be found
-     */
     protected function findModel($id)
     {
         if (($model = Kategori::findOne($id)) !== null) {
             return $model;
         }
-
         throw new NotFoundHttpException('The requested page does not exist.');
     }
 }
