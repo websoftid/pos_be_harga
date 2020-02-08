@@ -16,3 +16,5 @@ perangkat ini secara periodik.
 
 Perangkat lunak PoS resmi yang akan terhubung dengan perangkat lunak ini akan
 dikembangkan kemudian.
+
+Untuk menjalankan layanan web gunakan _bash script_  `service`.
