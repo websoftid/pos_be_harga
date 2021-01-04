@@ -64,4 +64,9 @@ class KategoriController extends Controller
         }
         throw new NotFoundHttpException('The requested page does not exist.');
     }
+
+    public function actionView($id) {
+      return $this->redirect(['produk/create', 'kategori' => $id]);
+    }
+
 }

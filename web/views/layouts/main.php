@@ -44,7 +44,7 @@ AppAsset::register($this);
       $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
     } else {
       $menuItems[] = ['label' => 'Kategori', 'url' => ['/kategori']];
-      $menuItems[] = ['label' => 'Produk', 'url' => ['/produk']];
+      //$menuItems[] = ['label' => 'Produk', 'url' => ['/produk']];
       $menuItems[] = ['label' => 'Update Harga', 'url' => ['/harga']];
       $menuItems[] = '<li>'
         . Html::beginForm(['/site/logout'], 'post')
